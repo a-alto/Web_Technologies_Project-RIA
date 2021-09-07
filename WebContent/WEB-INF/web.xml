@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>TIW-Project-Altomare-Marchesani</display-name>  
+  <context-param>
+    <param-name>dbUrl</param-name>
+    <param-value>jdbc:mysql://localhost:3306/db_img_catalog?serverTimezone=UTC</param-value>
+  </context-param>
+  <context-param>
+    <param-name>dbUser</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>dbPassword</param-name>
+    <param-value>mysqlpwd</param-value>
+  </context-param>
+  <context-param>
+    <param-name>dbDriver</param-name>
+    <param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  <filter>
+  	<filter-name>Checker</filter-name>
+  	<filter-class>it.polimi.tiw.AltomareMarchesani.filters.Checker</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>Checker</filter-name>
+  	<url-pattern>/Home</url-pattern>
+  	<url-pattern>/GetCatalogue</url-pattern>
+  	<url-pattern>/CreateCategory</url-pattern>
+  	<url-pattern>/UpdateCategories</url-pattern>
+  	<url-pattern>/Home.html</url-pattern>
+  </filter-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>

@@ -1,0 +1,5 @@
+.toMove {color: red;}
+.dragOver {
+	color: blue;
+}
+* {list-style: none;}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<!-- <meta http-equiv="Content-type" content="text/html; charset=UTF-8"> -->
+<title>Image Cataloguing Home</title>
+<link rel="stylesheet" type="text/css" media="all" href="css/mystyle.css" />
+<script type="text/javascript" src="js/script.js" defer></script>
+</head>
+<body>
+
+<h1>Welcome to the Image Cataloguing Management Home Page</h1>
+<br>
+<br>
+
+<div class="categoriesBox">
+	<ul id="categoriesList">
+		<!-- List items -->
+	</ul>
+</div>
+<br>
+<div id="saveBox">
+	<!-- Save button -->
+</div>
+<br>
+<br>
+
+<!-- Form to submit a new category -->
+<div class="formdiv">
+	<p>Fill the form to create a new category</p>
+	<form action="#" method="POST">
+		<fieldset>
+			<p>
+				Category name: <input type="text" name="name" id="nameTextbox" required/>
+			</p>
+			<p>
+				<label>Choose the category-father:</label> <select name="fatherId" id="categoriesMenu">
+					<option value="0">-- New Top Category --</option>
+				</select>
+			</p>
+			<input type="button" name="submitButton" value="Add new category" onclick="addCategory();" />
+		</fieldset>
+	</form>
+</div>
+</body>
+</html>
